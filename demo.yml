@@ -1,12 +1,17 @@
-spring:
-  application:
-    name: config
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/arthur-zjm/arthurTest.git
-  profiles:
-    active: native
 server:
-  port: 9090
+  port: 8761
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1/eureka
+    register-with-eureka: false
+    fetch-registry: false
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+  datacenter: HKISL
+  environment: production
+  instance:
+    hostname: localhost
