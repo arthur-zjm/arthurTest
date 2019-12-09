@@ -1,0 +1,13 @@
+server:
+  prot: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8760/eureka/
+    register-with-eureka: true
+    fetch-registry: false
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
