@@ -1,2 +1,12 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/arthur-zjm/arthurTest.git
+  profiles:
+    active: native
 server:
-  port: 9091
+  port: 9090
